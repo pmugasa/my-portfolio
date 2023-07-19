@@ -18,13 +18,14 @@ const Card = ({ project }) => {
               <p
                 key={tech}
                 className={
-                  "font-normal text-xs" + tech == "firebase"
-                    ? " text-yellow-500 "
-                    : tech == "react"
-                    ? "text-blue-400"
-                    : tech == "mongodb"
-                    ? "text-green-400"
-                    : "text-white"
+                  "font-normal text-xs" +
+                  (tech === "firebase"
+                    ? " text-yellow-500"
+                    : tech === "react"
+                    ? " text-blue-400"
+                    : tech === "mongodb"
+                    ? " text-green-400"
+                    : " text-white")
                 }
               >
                 #{tech}
