@@ -49,6 +49,16 @@ const App = () => {
       img: "/assets/dealdash.png",
     },
   ];
+  const technologies = [
+    { name: "HTML", img: "/assets/icons8-html.svg" },
+    { name: "CSS", img: "/assets/icons8-css.svg" },
+    { name: "Javascript", img: "/assets/icons8-javascript.svg" },
+    { name: "Tailwindcss", img: "/assets/icons8-tailwindcss.svg" },
+    { name: "React", img: "/assets/icons8-react.svg" },
+    { name: "Firebase", img: "/assets/icons8-firebase.svg" },
+    { name: "Node Js", img: "/assets/icons8-node-js.svg" },
+    { name: "Git", img: "/assets/icons8-git.svg" },
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,7 +82,7 @@ const App = () => {
   };
   return (
     <>
-      <div className="w-full px-32">
+      <div className="w-full sm:px-32">
         <header>
           <nav className="w-full p-6 text-white border-b-gray-600">
             <div className="flex font-bold w-full p-2 ">
@@ -109,11 +119,34 @@ const App = () => {
               Hi 👋🏾, I'm Pete
             </h1>
             <p className="font-normal my-4 text-sm sm:text-lg">
-              Self-taught Developer | Proficient with
-              <span className="text-blue-400 ml-1">React </span>and
-              <span className="text-green-500 ml-1">Node.js</span>
+              Self-taught Front-end Developer
             </p>
           </div>
+          {/*technologies*/}
+          <section
+            id="projects"
+            className=" flex flex-col items-center justify-center pt-24 sm:pt-0 sm:h-40"
+          >
+            <h2 className="font-bold text-3xl text-center pb-8">
+              Technologies 👨🏾‍💻
+            </h2>
+            <img src="" />
+            <div className=" flex items-center justify-center">
+              {technologies.map((t) => {
+                return (
+                  <div key={t.name} className="group">
+                    <img
+                      src={t.img}
+                      className="h-10 w-10 hover:h-20 hover:w-20 hover:cursor-pointer"
+                    />
+                    <p className="hidden group-hover:block text-center text-xs font-bold">
+                      {t.name}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
 
           {/*projects*/}
           <section
