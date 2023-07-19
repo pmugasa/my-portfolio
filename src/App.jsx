@@ -116,7 +116,7 @@ const App = () => {
           {/*hero section*/}
           <section className="text-center h-72 sm:h-[500px]  flex flex-col items-center justify-center">
             <h1 className="font-extrabold text-3xl sm:text-4xl">
-              Hi 👋🏾, I'm Pete
+              Hi, I'm <span className="text-blue-400">Pete</span>
             </h1>
             <p className="font-normal my-4 text-sm sm:text-lg">
               Self-taught Front-end Developer
