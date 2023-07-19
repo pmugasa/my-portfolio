@@ -82,9 +82,9 @@ const App = () => {
   };
   return (
     <>
-      <div className="w-full sm:px-32">
+      <div className="w-full ">
         <header>
-          <nav className="w-full p-6 text-white border-b-gray-600">
+          <nav className="sm:mx-12 p-6 text-white border-b-gray-600">
             <div className="flex font-bold w-full p-2 ">
               <div className="space-x-8 ">
                 <a
@@ -104,7 +104,7 @@ const App = () => {
                 <a
                   href="/Peterson_Mugasa_Resume.pdf"
                   download="/Peterson_Mugasa_Resume.pdf"
-                  className="hover:cursor-pointe text-white text-sm bg-blue-500 px-2 py-0.5 rounded-md hover:bg-blue-400 hover:drop-shadow-2xl hover:border hover:border-blue-700"
+                  className="hover:cursor-pointe text-white text-sm bg-blue-500 px-2 py-2 rounded-md hover:bg-blue-400 hover:drop-shadow-2xl hover:border hover:border-blue-700"
                 >
                   download cv
                 </a>
@@ -114,20 +114,20 @@ const App = () => {
         </header>
         <main className=" text-white">
           {/*hero section*/}
-          <div className="text-center sm:h-[500px] flex flex-col items-center justify-center">
+          <section className="text-center h-72 sm:h-[500px]  flex flex-col items-center justify-center">
             <h1 className="font-extrabold text-3xl sm:text-4xl">
               Hi 👋🏾, I'm Pete
             </h1>
             <p className="font-normal my-4 text-sm sm:text-lg">
               Self-taught Front-end Developer
             </p>
-          </div>
+          </section>
           {/*technologies*/}
           <section
             id="projects"
-            className=" flex flex-col items-center justify-center pt-24 sm:pt-0 sm:h-40"
+            className=" flex flex-col items-center justify-center pt-8 sm:mt-20 sm:mb-8 sm:h-40"
           >
-            <h2 className="font-bold text-3xl text-center pb-8">
+            <h2 className="font-bold text-3xl text-center mb-8 sm:mb-20">
               Technologies 👨🏾‍💻
             </h2>
             <img src="" />
@@ -151,10 +151,10 @@ const App = () => {
           {/*projects*/}
           <section
             id="projects"
-            className=" flex flex-col items-center justify-center pt-24 sm:pt-0 sm:h-screen"
+            className=" flex flex-col items-center justify-center mt-24 sm:mt-0 lg:mt-32 sm:h-screen"
           >
             <h2 className="font-bold text-3xl text-center pb-8">Projects ⚒️</h2>
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 sm:gap-2  lg:grid-cols-3 lg:gap-4">
               {/*card*/}
               {DATA.map((project) => (
                 <Card key={project.title} project={project} />
@@ -165,7 +165,7 @@ const App = () => {
           {/*contact form*/}
           <section
             id="contact"
-            className="sm:h-screen flex flex-col items-center justify-center pt-24 pb-10 sm:pt-0"
+            className="sm:h-[500px] flex flex-col items-center justify-center mt-24  mb-10 sm:mt-0"
           >
             <h2 className="font-bold text-3xl text-center pb-8">
               Get in touch 📞

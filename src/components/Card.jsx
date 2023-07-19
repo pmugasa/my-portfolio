@@ -1,7 +1,7 @@
 const Card = ({ project }) => {
   return (
     <>
-      <div className="my-2  h-52 w-72 lg:w-72 p-1 border border-gray-600 bg-gray-700 hover:shadow-lg  rounded-md flex flex-col">
+      <div className="my-2  h-52 w-60  p-1 border border-gray-600 bg-gray-700 hover:shadow-lg  rounded-md flex flex-col">
         <div className="h-52 w-full hover:cursor-pointer">
           <a href={project.demo} target="_blank" rel="noopener noreferrer">
             <img
