@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Github, Twitter } from "lucide-react";
-import axios from "axios";
 import emailJs from "@emailjs/browser";
 //components
 import Card from "./components/Card";
@@ -53,7 +52,7 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     try {
       await emailJs.send(
         import.meta.env.VITE_SERVICE_KEY,
@@ -66,10 +65,9 @@ const App = () => {
 
       setEmail("");
       setMsg("");
-
-      console.log("RESPONSE:", res);
+      setIsLoading(false);
     } catch (error) {
-      console.log("ERROR:", error);
+      alert("ERROR:", error);
     }
   };
   return (
@@ -96,7 +94,7 @@ const App = () => {
                 <a
                   href="/Peterson_Mugasa_Resume.pdf"
                   download="/Peterson_Mugasa_Resume.pdf"
-                  className="hover:cursor-pointe text-white bg-blue-500 px-2 py-0.5 rounded-md hover:bg-blue-400 hover:drop-shadow-2xl hover:border hover:border-blue-700"
+                  className="hover:cursor-pointe text-white text-sm bg-blue-500 px-2 py-0.5 rounded-md hover:bg-blue-400 hover:drop-shadow-2xl hover:border hover:border-blue-700"
                 >
                   download cv
                 </a>
@@ -148,6 +146,7 @@ const App = () => {
                     </label>
                     <input
                       required
+                      value={email}
                       type="text"
                       id="email"
                       onChange={(e) => setEmail(e.target.value)}
@@ -161,6 +160,7 @@ const App = () => {
                     </label>
                     <textarea
                       id="msg"
+                      value={msg}
                       required
                       onChange={(e) => setMsg(e.target.value)}
                       placeholder="Your message here..."
@@ -207,9 +207,14 @@ const App = () => {
       </div>
       <footer className="w-full flex items-center justify-center p-4">
         <div className=" font-bold text-white space-x-4">
-          <p>Made with 💖 by Pete</p>
+          <p>Made with ❤️ by Pete</p>
           <div className="flex items-center justify-center space-x-4 pt-4">
-            <a className="hover:cursor-pointer">
+            <a
+              className="hover:cursor-pointer"
+              href="https://twitter.com/pete_zw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Twitter color="#ffffff" absoluteStrokeWidth />
             </a>
             <a
