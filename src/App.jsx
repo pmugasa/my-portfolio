@@ -48,6 +48,13 @@ const App = () => {
       tech: ["react", "firebase"],
       img: "/assets/dealdash.png",
     },
+    {
+      title: "Interactive Comments Section",
+      src: "https://github.com/pmugasa/interactive-comments-section/tree/main",
+      demo: "https://interactive-comments-section-five-eta.vercel.app",
+      tech: ["react"],
+      img: "/assets/interactive-comments-section.png",
+    },
   ];
   const technologies = [
     { name: "HTML", img: "/assets/icons8-html.svg" },
