@@ -44,7 +44,7 @@ const App = () => {
     {
       title: "DealDash eCommerce",
       src: "https://github.com/pmugasa/deal-dash",
-      demo: "https://deal-dash-cebf4.web.app",
+      demo: "https://deal-dash.vercel.app",
       tech: ["react", "firebase"],
       img: "/assets/dealdash.png",
     },
