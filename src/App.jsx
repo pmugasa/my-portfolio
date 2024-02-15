@@ -83,10 +83,11 @@ const App = () => {
 
       setEmail('')
       setMsg('')
-      setIsLoading(false)
+      alert('Message sent! ✅')
     } catch (error) {
-      alert('ERROR:', error)
+      alert('Ooopss! ⛔', error.message)
     }
+    setIsLoading(false)
   }
   return (
     <>
